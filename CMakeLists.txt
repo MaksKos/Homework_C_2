@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wpedantic -pthread")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wpedantic -pthread")
 
-add_compile_options("-fsanitize=address" "-fsanitize=address" "-fsanitize=undefined")
-add_link_options("-fsanitize=address" "-fsanitize=address" "-fsanitize=undefined")
+add_compile_options("-fsanitize=undefined")
+add_link_options( "-fsanitize=undefined")
 
 add_compile_options("--coverage")
 
