@@ -25,8 +25,7 @@ jobs:
         run: gcovr -r . --html -o report.html && cp report.html ../
 
       - name: upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-        CODECOV_TOKEN = cde970d7-e936-47d0-b914-e12ba82bf21a
+        uses: codecov/codecov-action@v2
         with:
           file: ./report.html
           flags: unittests
