@@ -126,12 +126,12 @@ TEST (test_cmp, test_cmp){
     EXPECT_EQ (compare_position(&left, &right), -10);
     strcpy(left->position, position_2);
 
-    EXPECT_EQ (compare_position(&left, &right), 1);
+    EXPECT_TRUE (compare_position(&left, &right) == 1 || compare_position(&left, &right) == 9);
 
     if (left->last_name != nullptr) strcpy(left->last_name, last_name_1);
     if (right->last_name != nullptr) strcpy(right->last_name, last_name_2);
     
-    EXPECT_EQ (compare_name(&left, &right), -1);
+    EXPECT_TRUE (compare_name(&left, &right) == -1 || compare_name(&left, &right) == -10);
     
     free_employee(left);
     free_employee(right);
