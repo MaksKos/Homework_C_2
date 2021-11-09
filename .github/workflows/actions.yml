@@ -22,7 +22,7 @@ jobs:
 
 
       - name: code coverage
-        run: gcovr -r .. --html -o report.html && cp report.html ../
+        run: gcovr -r . --html -o report.html && cp report.html ../
 
       - name: upload coverage to Codecov
         uses: codecov/codecov-action@v2
